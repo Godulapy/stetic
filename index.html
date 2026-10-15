@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Gódula · Clínica Estética y Bienestar en Asunción</title>
+  <meta name="description" content="Tratamientos faciales, corporales y de bienestar en Asunción. Agenda online con bonus de descuento y sumate al Club Gódula de beneficios para negocios wellness.">
+  <meta name="theme-color" content="#F9F6F0">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gódula · Clínica Estética y Bienestar">
+  <meta property="og:description" content="Ciencia, calma y resultados visibles. Agenda online con bonus de descuento.">
+  <meta property="og:locale" content="es_PY">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+
+  <!--
+    Datos editables (también leídos por main.js):
+    - WhatsApp: +595 987 302 505
+    - Bonus web: 10 % (ajustar texto en #bonus y #agendar)
+  -->
+</head>
+
+<body data-whatsapp="595987302505" data-bonus="10">
+
+  <!-- Sprite de íconos (trazo uniforme, heredan currentColor) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-face" viewBox="0 0 24 24"><path d="M12 3c-3.9 0-6.5 3-6.5 7 0 4.6 2.6 9.5 6.5 11 3.9-1.5 6.5-6.4 6.5-11 0-4-2.6-7-6.5-7Z"/><path d="M9 11h.01M15 11h.01M9.5 15.5c1.4 1 3.6 1 5 0"/></symbol>
+      <symbol id="i-body" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M8 21v-6l-2-5 6 2 6-2-2 5v6M10 21v-4M14 21v-4"/></symbol>
+      <symbol id="i-laser" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 9-12h-7l1-8Z"/></symbol>
+      <symbol id="i-lotus" viewBox="0 0 24 24"><path d="M12 20c-3.5 0-7-2.5-8-7 3 0 5.5 1 8 3 2.5-2 5-3 8-3-1 4.5-4.500 7-8 7Z"/><path d="M12 16c-2-2-2.500-6 0-11 2.500 5 2 9 0 11Z"/></symbol>
+      <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.500 6 11a6 6 0 0 1-12 0c0-4.500 6-11 6-11Z"/><path d="M9.500 15a2.500 2.500 0 0 0 2.500 2.500"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.500 2.500M15.500 15.500 18 18M18 6l-2.500 2.500M8.500 15.500 6 18"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.200 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12Z"/><circle cx="12" cy="10" r="2.500"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.500 4.500 4.500L19 7.500"/></symbol>
+      <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10H4Z"/><path class="wave" d="M16.500 9a4 4 0 0 1 0 6M19 6.500a8 8 0 0 1 0 11"/><path class="mute" d="m17 9 4 6M21 9l-4 6"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.500A8 8 0 0 1 9.500 4 8 8 0 1 0 20 14.500Z"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.500 1.500M17.500 17.500 19 19M19 5l-1.500 1.500M6.500 17.500 5 19"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3 21l1.600-4.700A9 9 0 1 1 8 19.500L3 21Z"/><path d="M9 9.500c0 3 2.500 5.500 5.500 5.500l1.300-1.300-2-1-1 .8a4 4 0 0 1-2-2l.8-1-1-2L9 9.500Z"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Capa de ambiente: grano + orbes (decorativas) -->
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb--rose"></span>
+    <span class="orb orb--sand"></span>
+    <span class="grain"></span>
+  </div>
+
+  <!-- Pantalla de bienvenida: necesaria para permitir audio (gesto del usuario) -->
+  <div class="welcome" data-welcome role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="welcome__inner">
+      <p class="eyebrow">Bienvenida</p>
+      <h2 id="welcome-title" class="welcome__title">Respirá hondo.<br><em>Ya estás en Gódula.</em></h2>
+      <p class="welcome__text">Te invitamos a vivir la experiencia con una música suave de fondo. Podés cambiarlo cuando quieras.</p>
+      <div class="welcome__actions">
+        <button class="btn btn--primary" type="button" data-welcome-accept>
+          <svg class="icon" aria-hidden="true"><use href="#i-sound"/></svg>
+          Entrar con sonido
+        </button>
+        <button class="btn btn--ghost" type="button" data-welcome-decline>Entrar en silencio</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" data-header>
+    <div class="container site-header__bar">
+      <a class="brand" href="#inicio" aria-label="Gódula, ir al inicio">
+        <span class="brand__mark" aria-hidden="true">G</span>
+        <span class="brand__name">Gódula<small>Clínica Estética</small></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal" data-nav>
+        <ul class="nav__list">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#club">Club Gódula</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#faq">Preguntas</a></li>
+          <li><a class="nav__cta" href="#agendar">Agendar</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__tools">
+        <button class="icon-btn" type="button" data-sound-toggle aria-pressed="false" aria-label="Activar música ambiente">
+          <svg class="icon" aria-hidden="true"><use href="#i-sound"/></svg>
+        </button>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Cambiar a modo oscuro">
+          <svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" data-reveal>Estética avanzada · Bienestar integral</p>
+          <h1 id="hero-title" class="hero__title" data-reveal>
+            Tu piel, tu calma,<br><em>tu mejor versión.</em>
+          </h1>
+          <p class="hero__lead" data-reveal>
+            Protocolos personalizados, tecnología de vanguardia y un espacio diseñado para que el tiempo se detenga. Resultados visibles, sin apuro y sin exageraciones.
+          </p>
+          <div class="hero__actions" data-reveal>
+            <a class="btn btn--primary" href="#agendar">
+              Agendar con bonus web
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+          </div>
+
+          <dl class="hero__stats" data-reveal>
+            <div><dt>Evaluación inicial</dt><dd>Personalizada</dd></div>
+            <div><dt>Protocolos</dt><dd>Seguros y medibles</dd></div>
+            <div><dt>Agenda</dt><dd>En minutos</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true" data-reveal>
+          <div class="arch">
+            <div class="arch__inner">
+              <span class="arch__ring"></span>
+              <span class="arch__ring arch__ring--2"></span>
+              <svg class="arch__icon"><use href="#i-lotus"/></svg>
+            </div>
+          </div>
+          <div class="chip chip--a"><svg class="icon"><use href="#i-sparkle"/></svg> Resultados naturales</div>
+          <div class="chip chip--b"><svg class="icon"><use href="#i-drop"/></svg> Hidratación profunda</div>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#servicios" aria-label="Bajar a servicios"><span></span></a>
+    </section>
+
+    <!-- BONUS WEB (banda) -->
+    <aside class="bonus" id="bonus" aria-label="Beneficio por agendar online">
+      <div class="container bonus__inner">
+        <p><strong>Bonus web:</strong> 10 % de descuento en tu primera sesión al agendar online.</p>
+        <a href="#agendar">Activar mi bonus <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </aside>
+
+    <!-- SERVICIOS -->
+    <section class="section" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow" data-reveal>Servicios</p>
+          <h2 id="servicios-title" class="section__title" data-reveal>Cuidado experto, <em>a tu medida.</em></h2>
+          <p class="section__lead" data-reveal>Cada tratamiento empieza con una evaluación. Diseñamos el plan según tu piel, tu ritmo y tus objetivos.</p>
+        </header>
+
+        <ul class="cards" role="list">
+          <li class="card" data-reveal data-tilt>
+            <svg class="card__icon icon icon--lg" aria-hidden="true"><use href="#i-face"/></svg>
+            <h3 class="card__title">Estética facial</h3>
+            <p class="card__text">Limpieza profunda, peelings, hidratación avanzada y protocolos antiedad para una piel luminosa y uniforme.</p>
+            <button class="card__link" type="button" data-book="Estética facial">Agendar <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </li>
+          <li class="card" data-reveal data-tilt>
+            <svg class="card__icon icon icon--lg" aria-hidden="true"><use href="#i-body"/></svg>
+            <h3 class="card__title">Estética corporal</h3>
+            <p class="card__text">Drenaje, modelado y reafirmación con técnicas manuales y aparatología, orientados a resultados progresivos.</p>
+            <button class="card__link" type="button" data-book="Estética corporal">Agendar <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </li>
+          <li class="card" data-reveal data-tilt>
+            <svg class="card__icon icon icon--lg" aria-hidden="true"><use href="#i-laser"/></svg>
+            <h3 class="card__title">Láser y aparatología</h3>
+            <p class="card__text">Depilación definitiva, rejuvenecimiento y tratamiento de manchas con equipos de última generación.</p>
+            <button class="card__link" type="button" data-book="Láser y aparatología">Agendar <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </li>
+          <li class="card" data-reveal data-tilt>
+            <svg class="card__icon icon icon--lg" aria-hidden="true"><use href="#i-lotus"/></svg>
+            <h3 class="card__title">Masajes y relax</h3>
+            <p class="card__text">Masajes descontracturantes, relajantes y de piedras calientes para soltar tensión y recuperar energía.</p>
+            <button class="card__link" type="button" data-book="Masajes y relax">Agendar <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </li>
+          <li class="card" data-reveal data-tilt>
+            <svg class="card__icon icon icon--lg" aria-hidden="true"><use href="#i-drop"/></svg>
+            <h3 class="card__title">Hidratación y rejuvenecimiento</h3>
+            <p class="card__text">Bioestimulación, mesoterapia y mascarillas de alta concentración para firmeza y brillo sostenido.</p>
+            <button class="card__link" type="button" data-book="Hidratación y rejuvenecimiento">Agendar <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </li>
+          <li class="card card--feature" data-reveal data-tilt>
+            <svg class="card__icon icon icon--lg" aria-hidden="true"><use href="#i-sparkle"/></svg>
+            <h3 class="card__title">Evaluación personalizada</h3>
+            <p class="card__text">¿No sabés por dónde empezar? Una primera consulta para definir tu plan ideal, sin compromiso.</p>
+            <button class="card__link" type="button" data-book="Evaluación personalizada">Reservar evaluación <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA / PROCESO -->
+    <section class="section section--tint" id="experiencia" aria-labelledby="exp-title">
+      <div class="container split">
+        <div class="split__copy">
+          <p class="eyebrow" data-reveal>La experiencia</p>
+          <h2 id="exp-title" class="section__title" data-reveal>Un ritual, <em>no un trámite.</em></h2>
+          <p class="section__lead" data-reveal>Desde que llegás hasta que te vas, cada detalle está pensado para que te sientas cuidada y en calma.</p>
+        </div>
+        <ol class="steps" role="list">
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">01</span>
+            <div><h3>Escuchamos</h3><p>Evaluación de piel y objetivos antes de recomendar nada.</p></div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">02</span>
+            <div><h3>Diseñamos</h3><p>Un plan con pasos claros, tiempos reales y presupuesto transparente.</p></div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">03</span>
+            <div><h3>Acompañamos</h3><p>Seguimiento y ajustes para sostener los resultados en el tiempo.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CLUB AUREA -->
+    <section class="section club" id="club" aria-labelledby="club-title">
+      <div class="container">
+        <div class="club__panel" data-reveal>
+          <div class="club__copy">
+            <p class="eyebrow">Club Gódula · Para negocios wellness</p>
+            <h2 id="club-title" class="section__title">Una comunidad que <em>se recomienda y se premia.</em></h2>
+            <p class="section__lead">
+              Un club de descuentos entre negocios de bienestar: tus clientes acceden a beneficios en Gódula y los nuestros, a beneficios en tu negocio. Más visibilidad, más clientes, sin costo de publicidad.
+            </p>
+
+            <ul class="checks" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Spas, gimnasios, yoga, nutrición, peluquerías y más</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Descuentos cruzados entre socios</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Difusión de tu negocio en nuestra comunidad</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Alta simple, en un mensaje</li>
+            </ul>
+          </div>
+
+          <form class="club__form" data-club-form novalidate aria-labelledby="club-form-title">
+            <h3 id="club-form-title">Sumá tu negocio</h3>
+
+            <div class="field">
+              <label for="club-name">Nombre del negocio</label>
+              <input id="club-name" name="negocio" type="text" autocomplete="organization" required placeholder="Ej.: Studio Calma">
+              <p class="field__error" role="alert" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="club-cat">Categoría</label>
+              <select id="club-cat" name="categoria" required>
+                <option value="" selected disabled>Elegí una categoría</option>
+                <option>Spa y masajes</option>
+                <option>Gimnasio / entrenamiento</option>
+                <option>Yoga / pilates</option>
+                <option>Nutrición</option>
+                <option>Peluquería y barbería</option>
+                <option>Uñas y belleza</option>
+                <option>Otra categoría wellness</option>
+              </select>
+              <p class="field__error" role="alert" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="club-contact">Tu nombre</label>
+              <input id="club-contact" name="contacto" type="text" autocomplete="name" required placeholder="Nombre y apellido">
+              <p class="field__error" role="alert" hidden></p>
+            </div>
+
+            <button class="btn btn--primary btn--block" type="submit">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
+              Quiero ser parte del club
+            </button>
+            <p class="form__note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section class="section" id="ubicacion" aria-labelledby="ubi-title">
+      <div class="container location">
+        <div class="location__info">
+          <p class="eyebrow" data-reveal>Ubicación</p>
+          <h2 id="ubi-title" class="section__title" data-reveal>Fácil de llegar, <em>difícil de dejar.</em></h2>
+
+          <ul class="info" role="list" data-reveal>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              <div><strong>Dirección</strong><span><!-- EDITAR --> Calle y número, Barrio, Asunción, Paraguay</span></div>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+              <div><strong>Horarios</strong><span><!-- EDITAR --> Lunes a viernes 09:00–19:00 · Sábados 09:00–13:00</span></div>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+              <div><strong>WhatsApp</strong><a href="https://wa.me/595987302505" data-wa-link>+595 987 302 505</a></div>
+            </li>
+          </ul>
+
+          <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Asunci%C3%B3n%2C+Paraguay" target="_blank" rel="noopener" data-reveal>
+            Abrir en Google Maps
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+
+        <div class="map" data-reveal>
+          <!-- Reemplazar src por el embed exacto de la clínica desde Google Maps > Compartir > Insertar -->
+          <iframe
+            title="Mapa de ubicación de la clínica"
+            src="https://www.google.com/maps?q=Asunci%C3%B3n%2C+Paraguay&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDAR / CONTACTO -->
+    <section class="section section--tint booking" id="agendar" aria-labelledby="book-title">
+      <div class="container booking__grid">
+        <div class="booking__copy">
+          <p class="eyebrow" data-reveal>Agenda online</p>
+          <h2 id="book-title" class="section__title" data-reveal>Reservá hoy y <em>activá tu bonus.</em></h2>
+          <p class="section__lead" data-reveal>
+            Al agendar desde la web recibís 10 % de descuento en tu primera sesión. Tu mensaje incluye un código único para validarlo.
+          </p>
+          <div class="ticket" data-reveal aria-live="polite">
+            <span class="ticket__label">Tu código de bonus</span>
+            <output class="ticket__code" data-code>000</output>
+            <button class="ticket__refresh" type="button" data-code-refresh aria-label="Generar otro código">Nuevo código</button>
+          </div>
+        </div>
+
+        <form class="booking__form" data-book-form novalidate aria-labelledby="book-form-title" data-reveal>
+          <h3 id="book-form-title">Solicitá tu turno</h3>
+
+          <div class="field">
+            <label for="b-name">Nombre</label>
+            <input id="b-name" name="nombre" type="text" autocomplete="name" required placeholder="Tu nombre">
+            <p class="field__error" role="alert" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="b-service">Servicio de interés</label>
+            <select id="b-service" name="servicio" required data-service-select>
+              <option value="" selected disabled>Elegí un servicio</option>
+              <option>Estética facial</option>
+              <option>Estética corporal</option>
+              <option>Láser y aparatología</option>
+              <option>Masajes y relax</option>
+              <option>Hidratación y rejuvenecimiento</option>
+              <option>Evaluación personalizada</option>
+            </select>
+            <p class="field__error" role="alert" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="b-when">Preferencia de horario <span class="opt">(opcional)</span></label>
+            <select id="b-when" name="horario">
+              <option value="">Sin preferencia</option>
+              <option>Mañana</option>
+              <option>Tarde</option>
+              <option>Sábado</option>
+            </select>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit">
+            <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
+            Agendar por WhatsApp
+          </button>
+          <p class="form__note">Sin registro. Confirmamos tu turno por el mismo chat.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq">
+        <header class="section__head section__head--left">
+          <p class="eyebrow" data-reveal>Preguntas frecuentes</p>
+          <h2 id="faq-title" class="section__title" data-reveal>Lo que <em>más nos preguntan.</em></h2>
+        </header>
+
+        <div class="faq__list" data-reveal>
+          <details>
+            <summary>¿Cómo funciona el bonus de agenda online? <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Al agendar desde la web, tu mensaje de WhatsApp incluye un código de 3 dígitos. Mencionalo en tu visita y se aplica el descuento a tu primera sesión.</p>
+          </details>
+          <details>
+            <summary>¿Necesito una evaluación antes de empezar? <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Recomendamos una primera evaluación para definir el protocolo más adecuado para tu piel y objetivos.</p>
+          </details>
+          <details>
+            <summary>¿Cómo me sumo al Club Gódula con mi negocio? <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Completá el formulario del club. Se abre un chat con tus datos y te contamos las condiciones de la alianza.</p>
+          </details>
+          <details>
+            <summary>¿Puedo reprogramar mi turno? <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Sí. Escribinos por el mismo chat con anticipación y coordinamos un nuevo horario.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div>
+        <a class="brand" href="#inicio" aria-label="Gódula, ir al inicio">
+          <span class="brand__mark" aria-hidden="true">G</span>
+          <span class="brand__name">Gódula<small>Clínica Estética</small></span>
+        </a>
+        <p class="site-footer__tag">Estética avanzada y bienestar integral en Asunción.</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <ul class="site-footer__links" role="list">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#club">Club Gódula</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#agendar">Agendar</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container site-footer__legal">
+      <p>© <span data-year>2026</span> Gódula. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante (sutil) -->
+  <a class="wa-float" href="https://wa.me/595987302505" data-wa-float target="_blank" rel="noopener" aria-label="Escribir por WhatsApp para agendar">
+    <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+
+  <noscript>
+    <p style="position:fixed;bottom:1rem;left:1rem;right:1rem;padding:.75rem 1rem;background:#D8B4B8;color:#4A3530;border-radius:.75rem;font:500 .9rem system-ui">
+      Para agendar, escribinos por WhatsApp al +595 987 302 505.
+    </p>
+  </noscript>
+</body>
+</html>
